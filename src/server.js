@@ -9,6 +9,7 @@ app.use(cors());
 const port = process.env.PORT || 8081;
 const db = mysql.createConnection({
     host:"localhost",
+    port: "3306",
     user:"root",
     password:"rootadmin",
     database:"client"
