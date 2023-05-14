@@ -3,11 +3,11 @@ import mysql  from 'mysql'
 
 
 const conexao = mysql.createConnection({
-    host:"sql10.freemysqlhosting.net",
+    host:"us-cdbr-east-06.cleardb.net",
     port: "3306",
-    user:"sql10617661",
-    password:"44IEuyB4Ll",
-    database:"sql10617661"
+    user:"b30bf6cd95c4eb",
+    password:"69f7fa5a",
+    database:"heroku_57ca30aa0660a0d"
 })
 
 
