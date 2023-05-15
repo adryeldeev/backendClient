@@ -2,18 +2,10 @@ import { consulta } from "../database/pool.js";
 
  class ClientRepository{
 
-    create(values) {
-        const sql =
-          "INSERT INTO heroku_57ca30aa0660a0d.newclient (name, email, numero) VALUES (?, ?, ?)";
-        return conexao
-          .promise()
-          .query(sql, values)
-          .then((result) => result[0].insertId)
-          .catch((err) => {
-            console.error("Erro ao criar cliente:", err);
-            throw new Error("Não foi possível cadastrar o cliente.");
-          });
-      }
+  create(values) {
+    const sql = "INSERT INTO heroku_57ca30aa0660a0d.newclient (name, email, numero) VALUES(?, ?, ?)";
+    return consulta(sql, values, 'Não foi possível cadastrar!')
+}
 
 
     findAll() {
