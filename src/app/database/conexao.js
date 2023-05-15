@@ -2,14 +2,25 @@ import mysql  from 'mysql'
 
 
 
-const conexao = mysql.createConnection({
-    host:"us-cdbr-east-06.cleardb.net",
-    port: "3306",
-    user:"b30bf6cd95c4eb",
-    password:"69f7fa5a",
-    database:"heroku_57ca30aa0660a0d"
-})
+const pool = mysql.createPool({
+    connectionLimit: 10,
+    host: 'us-cdbr-east-06.cleardb.net',
+    user: 'b30bf6cd95c4eb',
+    password: '69f7fa5a',
+    database: 'heroku_57ca30aa0660a0d',
+    port: '3306'
+});
 
+pool.getConnection((err, connection) => {
+    if (err) {
+        console.error('Erro ao conectar ao banco de dados: ' + err.stack);
+        return;
+    }
+
+    console.log('Conexão bem sucedida. ID da conexão: ' + connection.threadId);
+
+    connection.release();
+});
 
 export const consulta = (sql, valores='',  mensagemReject)=>{
     return new Promise((resolve, reject) => {
@@ -24,6 +35,6 @@ export const consulta = (sql, valores='',  mensagemReject)=>{
     
 }
 
-conexao.connect()
+
 
 export default conexao;
