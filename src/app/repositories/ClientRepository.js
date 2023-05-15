@@ -1,4 +1,4 @@
-import { consulta } from "../database/conexao.js";
+import { consulta } from "../database/pool.js";
 
  class ClientRepository{
 

@@ -24,7 +24,7 @@ pool.getConnection((err, connection) => {
 
 export const consulta = (sql, valores='',  mensagemReject)=>{
     return new Promise((resolve, reject) => {
-        conexao.query(sql, valores, (err, result) => {
+        pool.query(sql, valores, (err, result) => {
             if (err)
             return reject(mensagemReject);
             const row = JSON.parse(JSON.stringify(result))
@@ -37,4 +37,4 @@ export const consulta = (sql, valores='',  mensagemReject)=>{
 
 
 
-export default conexao;
+export default pool;
