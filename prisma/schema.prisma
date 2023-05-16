@@ -20,5 +20,4 @@ model Star {
   name            String    @db.VarChar(255)
   email           String    @db.VarChar(255)
   numero          BigInt
- 
 }
