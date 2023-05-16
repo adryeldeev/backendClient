@@ -17,10 +17,9 @@ datasource db {
 
 model Star {
   id              Int       @default(autoincrement()) @id
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+
   name            String    @db.VarChar(255)
   email           String    @db.VarChar(255)
   numero          BigInt
-  constellation   String    @db.VarChar(255)
+ 
 }
