@@ -4,10 +4,10 @@ import mysql  from 'mysql'
 
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'us-cdbr-east-06.cleardb.net',
-    user: 'b30bf6cd95c4eb',
-    password: '69f7fa5a',
-    database: 'heroku_57ca30aa0660a0d',
+    host: 'aws.connect.psdb.cloud',
+    user: 'l8929ekrxng9gsl72yb7',
+    password: 'pscale_pw_qw3FIwXElkQL06xd4lqo3SyMXLWgE520q2hWgvpmCPR',
+    database: ' bd_mysql',
     port: '3306'
 });
 
