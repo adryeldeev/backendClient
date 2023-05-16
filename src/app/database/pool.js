@@ -7,7 +7,7 @@ const pool = mysql.createPool({
     host: 'aws.connect.psdb.cloud',
     user: 'l8929ekrxng9gsl72yb7',
     password: 'pscale_pw_qw3FIwXElkQL06xd4lqo3SyMXLWgE520q2hWgvpmCPR',
-    database: ' bd_mysql',
+    database: 'bd_mysql',
     port: '3306'
 });
 
