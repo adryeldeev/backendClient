@@ -13,13 +13,7 @@
     "start": "node src/server.js",
     "postinstall": "prisma generate"
   },
-  "prisma": {
-    "schema": "./prisma/schema.prisma",
-    "generator": {
-      "provider": "prisma-client-js",
-      "output": "./components/lib/prisma.js"
-    }
-  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
