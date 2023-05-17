@@ -13,7 +13,6 @@
     "start": "node src/server.js",
     "postinstall": "prisma generate"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
