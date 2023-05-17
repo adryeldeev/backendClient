@@ -5,8 +5,8 @@ import mysql  from 'mysql'
 const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'aws.connect.psdb.cloud',
-    user: 'aaasemjevq0p1cbimb0f',
-    password: 'pscale_pw_nmuqNSiujLjOZMPHO1ncPfv7FQjJjjREO8z5b2KYmyj',
+    user: 'dr8yksjbov31fcdpoepu',
+    password: 'pscale_pw_lizEQulVAk8Slb91TDCXGCSLlwd1zd5KMzsi1g6iObc',
     database: 'bd_mysql',
     port: '3306'
 });
