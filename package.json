@@ -8,7 +8,7 @@
     "node": "18.x"
   },
   "scripts": {
-    "vercel-build":"next build",
+    "vercel-build":"prisma migrate deploy && next build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
